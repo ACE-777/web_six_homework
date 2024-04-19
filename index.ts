@@ -135,9 +135,11 @@ console.log(fn1Result);
 
 console.log(hello("4"));
 
-type GetReadonlyKeys<T> = {
-    [K in keyof T]-?: Readonly<T[K]> extends T[K] ? K : never;
-    }[keyof T];
+type GetReadonlyKeys<
+    T,
+    U extends Readonly<T> = Readonly<T>,
+    K extends keyof T = keyof T
+> = K extends keyof T ? Equal<Pick<T, K>, Pick<U, K>> extends true ? K : never : never;
 
 /* _____________ Test Cases _____________ */
 // @ts-ignore
