@@ -11,12 +11,11 @@ const todo1 = {
 const exp1 = {
     title: 'Clean room'
 };
-// type ttwo = Pick<Todo, 'title' | 'completed'>
-// const r : ttwo = {
-//     title: 'dfdf',
-//     completed: false,
-// }
-// console.log(r.title,r.completed)
+const r = {
+    title: 'dfdf',
+    completed: false,
+};
+console.log(r.title, r.completed);
 const todo2 = {
     title: 'Clean room',
     completed: false,

@@ -47,12 +47,12 @@ const exp1 : Expected1 = {
 // -----------------
 type TodoPreview2 = MyPick<Todo, 'title' | 'completed'>
 
-// type ttwo = Pick<Todo, 'title' | 'completed'>
-// const r : ttwo = {
-//     title: 'dfdf',
-//     completed: false,
-// }
-// console.log(r.title,r.completed)
+type ttwo = Pick<Todo, 'title' | 'completed'>
+const r : ttwo = {
+    title: 'dfdf',
+    completed: false,
+}
+console.log(r.title,r.completed)
 const todo2: TodoPreview2 = {
     title: 'Clean room',
     completed: false,
